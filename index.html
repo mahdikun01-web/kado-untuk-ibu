@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Ibu ❤️</title>
+    <style>
+        /* Desain Dasar */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdf6e3;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Tampilan Awal (Layar Pembuka) */
+        #layar-awal {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+        }
+
+        h1 {
+            color: #d81b60;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .tombol-buka {
+            background-color: #d81b60;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .tombol-buka:hover {
+            background-color: #c2185b;
+            transform: scale(1.05);
+        }
+
+        /* Konten Utama (Kejutan) */
+        #konten-kejutan {
+            display: none; /* Disembunyikan sampai tombol ditekan */
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .animasi-muncul {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .pesan-teks {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .sub-judul {
+            font-style: italic;
+            color: #888;
+            margin-top: -15px;
+            margin-bottom: 25px;
+        }
+
+        /* Galeri Foto */
+        .galeri-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .kartu-foto {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .kartu-foto:hover {
+            transform: translateY(-10px) rotate(2deg);
+        }
+
+        .kartu-foto img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .kartu-foto p {
+            font-weight: bold;
+            color: #d81b60;
+            margin: 0;
+        }
+
+        .tanda-tangan {
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bagian 1: Layar Pembuka -->
+    <div id="layar-awal">
+        <h1>Halo, mama... 💌</h1>
+        <p>Ada pesan khusus nih, coba ditekan tombolnya!</p>
+        <button class="tombol-buka" onclick="bukaKado()">Buka Pesan Spesial</button>
+    </div>
+
+    <!-- Bagian 2: Pesan dan Galeri (Muncul setelah diklik) -->
+    <div id="konten-kejutan">
+        <h1>Selamat Ulang Tahun, mama! 🎉</h1>
+        <p class="sub-judul">(Iya, tahu kok agak telat... hehehe ✌️ tapi mending telat daripada nggak sama sekali kan?)</p>
+        
+        <div class="pesan-teks">
+            <p>Maaf ya mah, perayaannya sedikit terlambat! Tapi percayalah, doa dan rasa sayang untuk Ibu tidak pernah ada kata terlambat.</p>
+            <p>Terima kasih sudah menjadi mama yang luar biasa hebat, paling sabar menghadapi semuanya, dan selalu ada dalam setiap kondisi. Semoga Ibu selalu dikaruniai kesehatan, panjang umur, kebahagiaan yang nggak ada habisnya, dan semua yang Ibu semogakan bisa segera terwujud.</p>
+            <p>Terima kasih untuk semua pengorbanan dan cinta kasih mama. <i>We love you so much!</i> ❤️</p>
+            <div class="tanda-tangan">Dari anakmu tersayang,<br>Zain</div>
+        </div>
+
+        <h2>Momen-Momen Berharga Kita ✨</h2>
+        
+        <div class="galeri-grid">
+            <!-- Ganti nama file di src="" dengan nama file foto milikmu -->
+            <div class="kartu-foto">
+                <img src="foto1.jpg" alt="Foto Manis">
+                <p>Momen Paling Manis ❤️</p>
+            </div>
+            <div class="kartu-foto">
+                <img src="foto2.jpg" alt="Foto Lucu">
+                <p>Muka Lucu Semua 🤣</p>
+            </div>
+            <div class="kartu-foto">
+                <img src="foto3.jpg" alt="Foto Keren">
+                <p>Gaya Paling Keren 😎</p>
+            </div>
+            <div class="kartu-foto">
+                <img src="foto4.jpg" alt="Foto Keluarga">
+                <p>Keluarga Kesayangan 🥰</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript untuk Interaksi -->
+    <script>
+        function bukaKado() {
+            // Sembunyikan layar awal
+            document.getElementById('layar-awal').style.display = 'none';
+            
+            // Tampilkan layar kejutan dengan animasi
+            const konten = document.getElementById('konten-kejutan');
+            konten.style.display = 'block';
+            konten.classList.add('animasi-muncul');
+            
+            // Otomatis scroll ke atas (berjaga-jaga jika tergeser)
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
